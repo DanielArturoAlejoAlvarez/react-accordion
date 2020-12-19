@@ -18,6 +18,7 @@ export const Container = styled.div`
 
 export const Wrap = styled.div`
   background: #272727;
+  border: 1px solid rgba(153,153,153,.3);
   color: #FFF;
   display: flex;
   justify-content: center;
@@ -40,7 +41,7 @@ export const Dropdown = styled.div`
   background: #1C1C1C;
   color: #00FFB9;
   width: 100%;
-  height: 100px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
