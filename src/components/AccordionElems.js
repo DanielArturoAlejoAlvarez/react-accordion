@@ -14,6 +14,8 @@ export const Container = styled.div`
   top: 30%;
   box-shadow: 2px 10px 35px 1px rgba(153,153,153,.3);
 `
+
+
 export const Wrap = styled.div`
   background: #272727;
   color: #FFF;
@@ -26,6 +28,27 @@ export const Wrap = styled.div`
 
   h1 {
     padding: 2rem;
+    font-size: 2rem;
+  }
+
+  span {
+    margin-right: 1.5rem;
+  }
+`
+
+export const Dropdown = styled.div`
+  background: #1C1C1C;
+  color: #00FFB9;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #00FFB9;
+  border-top: 1px solid #00FFB9;
+
+  p {
     font-size: 2rem;
   }
 `

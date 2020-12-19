@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AccordionSection, Container, Wrap } from './AccordionElems'
+import { AccordionSection, Container, Dropdown, Wrap } from './AccordionElems'
 import { IconContext } from 'react-icons'
 import { Data } from './Data'
 import { FiPlus, FiMinus } from 'react-icons/fi'
@@ -16,7 +16,7 @@ const Accordion = () => {
   }
 
   return (
-    <IconContext.Provider value={{color: "#00FF89"}}>
+    <IconContext.Provider value={{color: "#00FF89", size: '25px'}}>
       <AccordionSection>
         <Container>
           {Data.map((item,index)=>(
@@ -25,7 +25,11 @@ const Accordion = () => {
                 <h1>{item.question}</h1>
                 <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
               </Wrap>
-              <p>{item.answer}</p>
+              {clicked === index ? (
+                <Dropdown>
+                  <p>{item.answer}</p>
+                </Dropdown>
+              ) : null}              
             </>
           ))}
         </Container>
